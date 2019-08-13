@@ -17,4 +17,4 @@ var DetailsSchema= new schema(
 	All_Seat:{type:String}
 });
 
-module.export=mongoose.model('Details',DetailsSchema);
+exports.model=mongoose.model('Details',DetailsSchema);

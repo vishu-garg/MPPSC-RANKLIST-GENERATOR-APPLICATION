@@ -1,10 +1,8 @@
-var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require('mongoose');
-var http=require('http');
 var routes=require('./route.js');
 
 var mongoDB='mongodb://localhost:27017/mppsc-ranklist-generator';
@@ -25,7 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-var server = http.createServer((function(req,res){
-	app.use('/',routes);
-}));
-server.listen(3005);
+app.listen(3005, () => {
+	console.log(`Server started at 3005`)
+});
