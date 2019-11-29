@@ -397,7 +397,7 @@ detail.find({},
 	}},
 	function(err,ranks_order){
 		if(err) throw err;
-		res.render('Rank_list',{rank_list:ranks_order});
+		res.render('rank_list',{rank_list:ranks_order});
 		});
 };
 

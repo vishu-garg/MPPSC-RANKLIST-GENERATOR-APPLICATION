@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+<body>
+
+  
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+  <img class="card-img border border-danger" style="border-width:10px!important; height: 290px;" src="http://www.mppsc.nic.in/mono1.jpg" alt="Card image">
+    	<div class="card-img-overlay">
+  	<div class="text-danger">
+    <div class="navbar-header">
+      
+  </div></div></div></div></nav>
+  <marquee class="animated flash" style="animation-duration: 3s;">Please reload(Ctrl+R) the page , in case if ranks are not shown.</marquee>
+
+<table class="table table-hover table-dark">
+<tr>
+<th>S.No.</th>
+<th>Roll No.</th>
+<th>Name</th>
+<th>Gender </th>
+<th>Category </th>
+<th>Relax</th>
+<th>Written Marks</th>
+<th>Interview Marks</th>
+<th> Total Marks</th>
+<th>Rank</th>
+</tr>
+<% for(let i=0;i<rank_list.length;i++){ %>
+<tr>
+<td><%= i+1%></td>
+<td><%= rank_list[i].roll_no %></td>
+<td><%= rank_list[i].name %></td>
+<td><%= rank_list[i].gender %></td>
+<td><%= rank_list[i].category %></td>
+<td><%= rank_list[i].relax %></td>
+<td><%= rank_list[i].Written_M %></td>
+<td><%= rank_list[i].Int_M %></td>
+<td><%= rank_list[i].Total_M %></td>
+<td><%= rank_list[i].All_Seat %></td>
+</tr>
+<% } %>
+</table>
+</body>
+</html>
